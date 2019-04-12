@@ -1,0 +1,17 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ],
+  "description": "heroku api",
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "employee-finder",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
