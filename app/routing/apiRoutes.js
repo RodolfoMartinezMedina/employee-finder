@@ -1,26 +1,26 @@
-var friendsData = require("../data/friends");
+var employeeData = require("../data/employees");
 
 module.exports = function(app) {
 
-    app.get("/api/friends", function(req, res) {
+    app.get("/api/employees", function(req, res) {
         
-        res.json(friendsData);
+        res.json(employeeData);
     });
 
-    app.post("/api/friends", function(req, res) {
+    app.post("/api/employees", function(req, res) {
 
         var user = req.body,
             leastDiff = 0,
             totalDiffs = [],
             bestMatch = [];
 
-        if (friendsData.length > 1) {   //more than 1 friend in comparison data; do the match routine
+        if (employeeData.length > 1) {   //more than 1 employee in comparison data; do the match routine
 
-            friendsData.forEach(function (friend) {
+            employeeData.forEach(function (employee) {
                 var diff = 0;
 
                 for (var i=0; i < user.scores.length; i++)
-                    diff += Math.abs(parseInt(user.scores[i]) - parseInt(friend.scores[i]));
+                    diff += Math.abs(parseInt(user.scores[i]) - parseInt(employee.scores[i]));
 
                 totalDiffs.push(diff);
             });
@@ -29,15 +29,15 @@ module.exports = function(app) {
             
             for (var i=0; i < totalDiffs.length; i++) {
                 if (totalDiffs[i] === leastDiff)
-                    bestMatch.push(friendsData[i]);
+                    bestMatch.push(employeeData[i]);
             }
 
             res.json(bestMatch);
         }
         else
-            res.json(friendsData);  //only 1 friend in the comparison data; return it
+            res.json(employeeData);  //only 1 employee in the comparison data; return it
         
 
-        friendsData.push(req.body); //pushes record to existing friends data
+        employeeData.push(req.body); //pushes record to existing employees data
     });
 };

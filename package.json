@@ -1,7 +1,7 @@
 {
-  "name": "friendfinder",
+  "name": "employeefinder",
   "version": "1.0.0",
-  "description": "Friend Finder - Node and Express Servers",
+  "description": "employee Finder - Node and Express Servers",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NitramDivad/FriendFinder.git"
+    "url": "git+https://github.com/RodolfoMartinezMedina/employee-finder"
   },
-  "author": "David Martin",
+  "author": "Rodolfo Martinez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NitramDivad/FriendFinder/issues"
+    "url": "https://github.com/RodolfoMartinezMedina/employee-finder/issues"
   },
-  "homepage": "https://github.com/NitramDivad/FriendFinder#readme",
+  "homepage": "https://github.com/RodolfoMartinezMedina/employee-finder#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3"
